@@ -1,0 +1,280 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Cairo, Tahoma, sans-serif;
+  color: #fff8ff;
+  background: radial-gradient(
+    ellipse at top,
+    #302452,
+    #17152f 45%,
+    #090a1d
+  );
+}
+
+.stars {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: .55;
+  background-image:
+    radial-gradient(2px 2px at 20px 30px, #fff, transparent),
+    radial-gradient(1px 1px at 90px 80px, #fff, transparent),
+    radial-gradient(1.5px 1.5px at 160px 130px, #e8d5ff, transparent);
+  background-size: 220px 180px;
+}
+
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px 15px;
+  position: relative;
+}
+
+.screen {
+  display: none;
+  width: min(100%, 650px);
+  text-align: center;
+  animation: in .5s ease;
+}
+
+.screen.active {
+  display: block;
+}
+
+.moon {
+  font-size: 70px;
+  color: #f9d6ee;
+  text-shadow: 0 0 35px #f3a9ce;
+}
+
+.eyebrow {
+  color: #c7b8ff;
+}
+
+.intro {
+  color: #d4cce9;
+  line-height: 2;
+}
+
+.hint {
+  color: #9a91b7;
+  font-size: .8rem;
+}
+
+h1 {
+  font-size: clamp(2rem, 7vw, 3.5rem);
+}
+
+h1 span,
+h2 span {
+  color: #f3a9ce;
+}
+
+.card {
+  padding: clamp(22px, 5vw, 38px);
+  margin: 12px 0;
+  border: 1px solid #ffffff20;
+  border-radius: 25px;
+  background: #ffffff0b;
+  box-shadow: 0 20px 60px #0003;
+  text-align: right;
+  line-height: 2;
+}
+
+.card h2 {
+  text-align: center;
+}
+
+.heart,
+.music-icon,
+.modal-star {
+  font-size: 2rem;
+  color: #f3a9ce;
+  text-align: center;
+}
+
+.signature,
+.final-note {
+  color: #f3a9ce;
+  text-align: center;
+  font-weight: 700;
+}
+
+.primary,
+.secondary,
+.play {
+  font: inherit;
+  cursor: pointer;
+  border: 0;
+}
+
+.primary {
+  padding: 12px 26px;
+  border-radius: 99px;
+  background: linear-gradient(135deg, #f4b4d6, #c7b8ff);
+  color: #24142f;
+  font-weight: 800;
+}
+
+.secondary {
+  margin: 20px 0;
+  padding: 10px 22px;
+  border: 1px solid #ffffff38;
+  border-radius: 99px;
+  background: #ffffff0b;
+  color: white;
+}
+
+.music {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 18px;
+}
+
+.music-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.music-info span,
+.music-note {
+  font-size: .8rem;
+  color: #bfb4d8;
+}
+
+.music-note {
+  width: 100%;
+  margin: 0;
+}
+
+.play {
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, #f4b4d6, #c7b8ff);
+}
+
+.wish-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.wish {
+  min-height: 110px;
+  border-radius: 18px;
+  background: #ffffff0b;
+  border: 1px solid #ffffff20;
+  color: white;
+  font: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  cursor: pointer;
+}
+
+.wish span {
+  font-size: 2rem;
+  color: #f3a9ce;
+}
+
+.wish-message {
+  padding: 15px;
+  min-height: 52px;
+  line-height: 1.8;
+  color: #d4cce9;
+  background: #ffffff08;
+  border-radius: 14px;
+}
+
+.cake {
+  font-size: 4rem;
+}
+
+.text-button {
+  display: block;
+  margin: 14px auto;
+  background: none;
+  color: #aaa0c5;
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 5;
+  background: #080817cc;
+  place-items: center;
+  padding: 20px;
+}
+
+.modal.open {
+  display: grid;
+}
+
+.modal-card {
+  background: #211b3b;
+  border: 1px solid #ffffff26;
+  border-radius: 24px;
+  padding: 28px;
+  text-align: center;
+  width: min(100%, 380px);
+}
+
+.close {
+  float: left;
+  background: none;
+  color: white;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.floaty {
+  position: fixed;
+  bottom: -25px;
+  animation: rise 3s forwards;
+  pointer-events: none;
+}
+
+@keyframes in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes rise {
+  to {
+    transform: translateY(-110vh);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .card {
+    padding: 20px;
+  }
+
+  .wish {
+    min-height: 100px;
+  }
+}

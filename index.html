@@ -1,0 +1,149 @@
+
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#100f2d">
+  <title>عالم ياسمين ✨</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="stars"></div>
+<main>
+
+<section class="screen active" id="home">
+  <div class="moon">☾</div>
+  <p class="eyebrow">رسالة صغيرة في يوم كبير</p>
+  <h1>ِكل سنه وانتي <span>أجمل حكاية</span></h1>
+  <p class="intro">
+    في هدية بسيطة مستنياكي هنا…<br>
+    خدي نفس وخلّي الليلة دي ليكي إنتي
+  </p>
+  <button class="primary" data-go="letter">افتحي هديتك ♡</button>
+  <p class="hint">ابدأي حكايتك</p>
+</section>
+
+<section class="screen" id="letter">
+  <div class="card">
+    <div class="heart">♡</div>
+    <p class="eyebrow">ل قمري</p>
+    <h2>في يوم ميلادك…</h2>
+
+    <p>
+      أتمنى السنة الجديدة من عمرك تكون أحنّ عليكي،
+      وأخفّ على قلبك، ومليانة لحظات تضحكي فيها من قلبك.
+      أتمنى تلاقي في أيامك راحة تستاهليها، ونجاحات تفرحك،
+      وأحلام تقرّب منك واحدة واحدة.
+    </p>
+
+    <p>
+      وجودك له حكاية خاصة، والنهارده فرصة أقولك إنك
+      تستاهلي كل حاجة حلوة، مش في عيد ميلادك بس،
+      لكن في كل يوم.
+    </p>
+
+    <div class="signature">عيد ميلاد سعيد يا ياسمين ♡</div>
+  </div>
+
+  <div class="card music">
+    <div class="music-icon">♫</div>
+    <div class="music-info">
+      <b>  يا بظيخه Until I Found You</b>
+      <span>Stephen Sanchez</span>
+    </div>
+
+    <button class="play" id="playBtn">▶</button>
+
+    <audio id="song" preload="none" loop>
+      <source src="until-i-found-you.mp3" type="audio/mpeg">
+    </audio>
+
+    <p class="music-note" id="musicNote">
+      شغلي الاغنيه ي بطيخه
+    </p>
+  </div>
+
+  <button class="secondary" data-go="wishes">
+    كملي ي بطيخه وقفتي ليه ↓
+  </button>
+</section>
+
+<section class="screen" id="wishes">
+  <p class="eyebrow">أربع أمنيات للسنة الجديدة</p>
+  <h2>اختاري نجمة ✨</h2>
+  <p class="intro">كل نجمة وراها أمنية ليكي.</p>
+
+  <div class="wish-grid">
+    <button class="wish"
+      data-wish="راحة بال تخلّي قلبك مطمّن، مفيش وجع تاني .">
+      <span>☾</span><b>راحة البال</b>
+    </button>
+
+    <button class="wish"
+      data-wish="احلامك كلها هساعدك تحققيها لو معرفتيش مش مشكله هحققها انا">
+      <span>✧</span><b>أحلامك</b>
+    </button>
+
+    <button class="wish"
+      data-wish="ضحكة حقيقية تيجي من غير سبب، وناس طيبة تخلّي الدنيا ألطف.">
+      <span>♡</span><b>الفرحة</b>
+    </button>
+
+    <button class="wish"
+      data-wish="تفتكري دايمًا إنك تستاهلي الحنية والاحترام والحاجات اللي تريح قلبك.">
+      <span>☆</span><b>أيام حلوة</b>
+    </button>
+  </div>
+
+  <div class="wish-message" id="wishMessage">
+    اختاري نجمة علشان تكتشفي أمنيتك.
+  </div>
+
+  <button class="secondary" data-go="final">
+    اخر مفاجاه ي بطيخه
+  </button>
+</section>
+
+<section class="screen" id="final">
+  <div class="cake">🎂</div>
+  <p class="eyebrow">النهارده يومك</p>
+
+  <h2>كل سنة وانتي طيبه <span>ياسمين</span></h2>
+
+  <p class="intro">
+    أتمنى السنة دي تكون شبه قلبك الحلو،
+    وتكون بداية لأيام تفتكريها بابتسامة.
+  </p>
+
+  <p class="final-note">
+    خلي أمنياتك كبيرة، وافتكري إنك تستاهلي الخير دايمًا. ♡
+  </p>
+  <p>
+    و ان انا دايما جمبك مهما حصل
+  </p>
+
+  <button class="primary" id="sparkleBtn">
+    خلّي السما تنوّر ✨
+  </button>
+
+  <button class="text-button" id="restart">
+   نبدا الحكايه تاني من الاول
+  </button>
+</section>
+
+</main>
+
+<div class="modal" id="modal">
+  <div class="modal-card">
+    <button class="close" id="close">×</button>
+    <div class="modal-star">✦</div>
+    <h3>أمنية ليكي</h3>
+    <p id="modalText"></p>
+    <button class="primary" id="ok">حلوة الأمنية دي ♡</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
